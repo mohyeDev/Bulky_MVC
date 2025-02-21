@@ -13,6 +13,7 @@
         <tr>
             <th>Category Name</th>
             <th>Display Order</th>
+            <th></th>
         </tr>
     </thead>
 
@@ -22,6 +23,10 @@
             <tr>
                 <td>@obj.Name</td>
                 <td>@obj.DisplayOrder</td>
+                <td class="w-75 btn-group">
+                        <a class="btn btn-primary mx-2" asp-controller="Category" asp-action="Edit"><i class="bi bi-pencil-square"></i>Edit</a>
+                        <a class="btn btn-danger mx-2" asp-controller="Category" asp-action="Delete"><i class="bi bi-trash-fill"></i>Delete</a>
+                </td>
             </tr>
         }
     </tbody>
