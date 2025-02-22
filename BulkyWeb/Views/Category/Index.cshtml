@@ -2,6 +2,10 @@
 <div class="container">
     <div class="row pt-4 pb-3">
         <div class="col-6">
+            @if(TempData["sucess"] is not null)
+            {
+                <h2>@TempData["sucess"]</h2>
+            }
             <h2>Category List</h2>
         </div>
         <div class="col-6 text-end">
@@ -18,7 +22,7 @@
     </thead>
 
     <tbody>
-        @foreach(var obj in Model.OrderBy(u=>u.DisplayOrder))
+        @foreach(var obj in Model.OrderBy(u=>u.Name))
         {
             <tr>
                 <td>@obj.Name</td>
